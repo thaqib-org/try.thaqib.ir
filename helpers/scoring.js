@@ -8,34 +8,34 @@ import { progress } from "./helpers.js";
 export const landingScoreDescription = (score) => {
   const description =
     score >= 120
-      ? "So. Much. Bonus. And you landed?? Incredible"
+      ? "فرودت فوق العاده بود"
       : score >= 99
-      ? "Perfect landing, incredible, you can’t get better than this"
-      : score >= 95
-      ? "Near-perfect landing, super smooth"
-      : score >= 90
-      ? "Very nice landing, amazing"
-      : score >= 85
-      ? "Pretty good landing, keep going!"
-      : score >= 80
-      ? "A good landing, keep trying"
-      : score >= 75
-      ? "Just shy of a good landing"
-      : score >= 70
-      ? "A solid “C” landing"
-      : score >= 65
-      ? "You landed but it could have been slower and straighter"
-      : score >= 60
-      ? "Not the worst landing, but not very good either"
-      : score >= 55
-      ? "Pretty bad landing, but it could be worse"
-      : score >= 55
-      ? "Not great"
-      : score >= 40
-      ? "Basically a fender bender, but you landed"
-      : score >= 30
-      ? "A near-crash, way too fast"
-      : "Terrible landing, you need to land slow and straight";
+        ? "همه چی عالی بود"
+        : score >= 95
+          ? "خوب بود"
+          : score >= 90
+            ? "عالیه ولی بهترم میشه"
+            : score >= 85
+              ? "یه فرود فوق العاده ولی بازم تلاش کن"
+              : score >= 80
+                ? "یه فرود عالی بازم تلاش کن"
+                : score >= 75
+                  ? "واو خوبه ولی بازم تلاش کن"
+                  : score >= 70
+                    ? "یه فرود معمولی بود"
+                    : score >= 65
+                      ? "فرود اومدی ولی میتونه با سرعت و زاویه بهتری باشه"
+                      : score >= 60
+                        ? "فرود بدی نبود ولی میتونه بهتر از اینم باشه"
+                        : score >= 55
+                          ? "فرود خوبی نبود"
+                          : score >= 55
+                            ? "فرود اومدی ولی بازم تلاش کن"
+                            : score >= 40
+                              ? "جالبه تونستی فرود بیای ولی میتونه بهتر باشه"
+                              : score >= 30
+                                ? "یه اشتباه میتونست همه چیو خراب کنه"
+                                : "فرود اومدی ولی بازم تلاش کن که امتیاز بیشتری بگیری";
 
   return description;
 };
@@ -43,36 +43,36 @@ export const landingScoreDescription = (score) => {
 export const crashScoreDescription = (score) => {
   const description =
     score >= 120
-      ? "So much bonus. So much crash."
+      ? "امتیازت خیلی زیاد بود ولی متاسفانه برخورد داشتی"
       : score >= 100
-      ? "Unbelievable, the crater is visible from Earth"
-      : score >= 95
-      ? "Ludicrous crash! The debris has entered orbit"
-      : score >= 90
-      ? "Incredible crash, the lander has vaporized"
-      : score >= 85
-      ? "Impressive speed, impressive angle - you crashed with style"
-      : score >= 80
-      ? "A fast crash, but it could be faster"
-      : score >= 75
-      ? "I think you meant to do that"
-      : score >= 70
-      ? "You definitely did not land…"
-      : score >= 65
-      ? "I think there’s a problem with the lander"
-      : score >= 60
-      ? "Sick crash!"
-      : score >= 50
-      ? "Were you trying to land, or…"
-      : score >= 40
-      ? "A bad crash, but it could be worse"
-      : score >= 30
-      ? "I don’t think we’re getting back to Earth"
-      : score >= 20
-      ? "A smooth… wait… you crashed"
-      : score >= 10
-      ? "The lander has been… damaged"
-      : "So, so close to a landing, but still a crash";
+        ? "با این سرعت این دهانه تو ماه از زمین هم معلومه"
+        : score >= 95
+          ? "بیشتر تلاش کن"
+          : score >= 90
+            ? "...هوف، واقعا کارت خوب بود ولی"
+            : score >= 85
+              ? "سرعتت و زاویت عالی بودن ولی متاسفانه درست فرود نیومد"
+              : score >= 80
+                ? "یه برخورد سریع بود"
+                : score >= 75
+                  ? "فک کردیم فرود اومد، نزدیک بود"
+                  : score >= 70
+                    ? "متاسفانه به درستی فرود نیومدی"
+                    : score >= 65
+                      ? "شاید ماه نشین یه مشکلی داره"
+                      : score >= 60
+                        ? "ای بابا تصادف بدی بود"
+                        : score >= 50
+                          ? "باید تلاشتو بیشتر کنی"
+                          : score >= 40
+                            ? "یه تصادف شدید داشتی ولی ادامه بده"
+                            : score >= 30
+                              ? "ای بابا اینجوری نمیتونیم به زمین برگردیم"
+                              : score >= 20
+                                ? "ای بابا تصادف رخ داد"
+                                : score >= 10
+                                  ? "یکمی سرعت رو کم کن"
+                                  : "خیلی خیلی نزدیک بود ولی متاسفانه به درستی فرود نیومد";
 
   return description;
 };
