@@ -22,14 +22,17 @@
   <script src="https://cdn.tailwindcss.com/"></script>
   </head>
   <body>
+
     <div class="game"></div>
+
     <div id="endGameStats" class="fullSizeContainer">
-      <h1 id="description"></h1>
+      <h1 id="description" dir="rtl"></h1>
       <div class="scoreContainer">
-        <span id="score"></span> point <span id="type"></span>
+        <span id="score"></span> امتیاز شما <span id="type"></span>
       </div>
+  
       <div class="meterAndLabel">
-        <div class="label">Speed</div>
+        <div class="label" style="text-align: center;font-weight: bold; font-size: 1.5rem;">سرعت</div>
         <div class="meter" data-stat-name="speed">
           <div class="cursor" data-percent-position="">
             <span data-value=""></span> <span class="unit"> MPH</span>
@@ -37,39 +40,41 @@
         </div>
       </div>
       <div class="meterAndLabel">
-        <div class="label">Angle</div>
+        <h3 class="label" style="text-align: center;font-weight: bold; font-size: 1.5rem;">زاویه</h3>
         <div class="meter" data-stat-name="angle">
           <div class="cursor" data-percent-position="">
             <span data-value=""></span> <span class="unit">&#176;</span>
           </div>
         </div>
       </div>
+
       <div class="statsTable">
         <div class="tableRow">
-          <span class="tableLabel">Time</span>
-          <span class="tableValue"><span id="duration"></span> seconds</span>
+          <span class="tableValue"><span id="duration"></span> Sec</span>
+          <span class="tableLabel">زمان</span>
         </div>
         <div class="tableRow">
-          <span class="tableLabel">Flips</span>
           <span class="tableValue" id="rotations"></span>
+          <span class="tableLabel">ملق</span>
         </div>
         <div class="tableRow">
-          <span class="tableLabel">Max Speed</span>
           <span class="tableValue"><span id="maxSpeed"></span> MPH</span>
+          <span class="tableLabel">بیشترین سرعت</span>
         </div>
         <div class="tableRow">
-          <span class="tableLabel">Max Height</span>
           <span class="tableValue"><span id="maxHeight"></span> FT</span>
+          <span class="tableLabel">بیشترین ارتفاع</span>
         </div>
       </div>
       <div class="buttonContainer">
         <div class="button loading" id="tryAgain">
-          <span id="tryAgainText">Play Again</span>
+          <span id="tryAgainText">شروع دوباره</span>
           <svg class="buttonAnimatedBorder">
             <rect width="100%" height="100%"></rect>
           </svg>
         </div>
-        <div class="button" id="share">
+
+        <!-- <div class="button" id="share">
           <span>Share</span>
           <svg class="buttonBorder">
             <rect width="100%" height="100%"></rect>
@@ -80,43 +85,44 @@
           <svg class="buttonBorder">
             <rect width="100%" height="100%"></rect>
           </svg>
-        </div>
+        </div> -->
       </div>
     </div>
     <div id="instructions" class="fullSizeContainer instructions">
       <div>
-        <h1>How to play</h1>
+        <h1>چجوری بازی کنیم</h1>
         <p>
-          Land on a white landing pad. Go slow and straight. If you touch down
-          too fast or angled, you crash. Try flipping for bonus points.
+          باید ماه نشین رو روی سطح ماه با سرعت و زاویه مناسب بشونی. میتونی سعی کنی رو هوا بچرخی تا امتیاز اضافه تر بگیری
+          <br>
+          (:موفق باشی
         </p>
       </div>
       <div>
-        <h2>Try the controls</h2>
+        <h2>بخش آموزش</h2>
         <div id="forKeyboard">
           <ul>
-            <li id="engineCheck">Up arrow</li>
-            <li id="rightRotationCheck">Left arrow</li>
-            <li id="leftRotationCheck">Right arrow</li>
+            <li id="engineCheck">فلش بالا رو کیبورد رو نگه دار</li>
+            <li id="rightRotationCheck">فلش سمت چپ رو کیبورد رو نگه دار</li>
+            <li id="leftRotationCheck">فلش سمت راست رو کیبورد رو نگه دار</li>
             <li id="engineAndRotationCheck">
-              Hold the up arrow while pressing the left or right arrows
+              همه ی دکمه های بالارو باهم نگه دار
             </li>
           </ul>
         </div>
         <div id="forTouch">
           <ul>
-            <li id="engineCheck">Tap the center of the screen</li>
-            <li id="rightRotationCheck">Tap the left side</li>
-            <li id="leftRotationCheck">Tap the right side</li>
+            <li id="engineCheck">وسط صفحه رو لمس کن</li>
+            <li id="rightRotationCheck">سمت چپ صفحه رو لمس کن</li>
+            <li id="leftRotationCheck">سمت راست صفحه رو لمس کن</li>
             <li id="engineAndRotationCheck">
-              Hold down on the center while you tap the sides
+              وسط صفحه به علاوه گوشه ها ی سمت راست و چپ رو لمس کن
             </li>
           </ul>
         </div>
       </div>
     </div>
     <div id="cornerChallenge" class="topLeftCorner show">
-      Daily Challenge <span id="cornerChallengeNumber"></span>
+      <span id="cornerChallengeNumber"></span>
     </div>
     <div id="tally" class="topRightCorner">
       L<span id="landingTotal"></span> C<span id="crashTotal"></span>
